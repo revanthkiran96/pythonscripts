@@ -1,0 +1,13 @@
+import boto3
+client = boto3.client('ec2',
+                      aws_access_key_id='AKIAS6CPPOVCWVGJGSCF',
+                      aws_secret_access_key='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',
+                      region_name="ap-northeast-1"
+                      )
+response = client.describe_regions().get('Regions',[])
+print(response)
+allregions = []
+for region in response:
+    allregions.append(region['RegionName'])
+
+print(allregions)
