@@ -1,0 +1,6 @@
+import boto3
+client=boto3.client('ec2')
+a=client.describe_instances()
+print(a.keys())
+from ec2_metadata import ec2_metadata
+print(ec2_metadata.instance_id)
