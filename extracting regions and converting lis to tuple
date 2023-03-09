@@ -1,0 +1,12 @@
+import boto3
+my_aws_regions = []
+client = boto3.client('ec2')
+all_regions = client.describe_regions().get('Regions', [])
+for region in all_regions:
+    my_aws_regions.append(region['RegionName'])
+
+fixed_regions = tuple(my_aws_regions)
+# print(my_aws_regions)
+
+for region in fixed_regions:
+    print(region)
