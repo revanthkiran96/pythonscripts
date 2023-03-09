@@ -3,5 +3,5 @@ client =boto3.client('ec2')
 all_ec2 = client.describe_instances().get('Reservations', [])
 for ec in all_ec2:
     for one in ec['Instances']:
-        print(one['InstanceId'])
+        print(one['InstanceId'], '---->',one['KeyName'])
         print(10* '=')
