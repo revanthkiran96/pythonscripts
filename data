@@ -1,1 +1,5 @@
 boto instance profile -----> toacess boto3 from multiple accounts
+[] ----list (mutable)
+() ---tuple (immutable)
+{} --- set (to  aviod duplicates) 
+(a:n} -- dictionary
